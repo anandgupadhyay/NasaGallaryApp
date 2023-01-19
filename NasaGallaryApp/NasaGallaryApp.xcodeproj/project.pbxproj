@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE350A792979115600CE33D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A782979115600CE33D5 /* AppDelegate.swift */; };
-		FE350A7B2979115600CE33D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A7A2979115600CE33D5 /* SceneDelegate.swift */; };
-		FE350A7D2979115600CE33D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A7C2979115600CE33D5 /* ViewController.swift */; };
-		FE350A802979115600CE33D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE350A7E2979115600CE33D5 /* Main.storyboard */; };
 		FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE350A812979115C00CE33D5 /* Assets.xcassets */; };
 		FE350A902979115D00CE33D5 /* NasaGallaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A8F2979115D00CE33D5 /* NasaGallaryAppTests.swift */; };
 		FE350A9A2979115D00CE33D5 /* NasaGallaryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A992979115D00CE33D5 /* NasaGallaryAppUITests.swift */; };
 		FE350A9C2979115D00CE33D5 /* NasaGallaryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A9B2979115D00CE33D5 /* NasaGallaryAppUITestsLaunchTests.swift */; };
-		FE350AA92979496E00CE33D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE350A832979115C00CE33D5 /* LaunchScreen.storyboard */; };
+		FE350AAD297960DA00CE33D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AAB297960D900CE33D5 /* AppDelegate.swift */; };
+		FE350AAE297960DA00CE33D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AAC297960DA00CE33D5 /* SceneDelegate.swift */; };
+		FE350AB8297964D400CE33D5 /* NetworkHelperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AB7297964D400CE33D5 /* NetworkHelperConstants.swift */; };
+		FE350ABA297964F700CE33D5 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AB9297964F700CE33D5 /* NetworkServiceProtocol.swift */; };
+		FE350ABC2979651000CE33D5 /* NewtorkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ABB2979651000CE33D5 /* NewtorkHelper.swift */; };
+		FE350ABE2979655A00CE33D5 /* NetworkErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ABD2979655A00CE33D5 /* NetworkErrorProtocol.swift */; };
+		FE350AC0297966E300CE33D5 /* AppObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ABF297966E300CE33D5 /* AppObserver.swift */; };
+		FE350AC229796FE100CE33D5 /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC129796FE100CE33D5 /* UIView+Loading.swift */; };
+		FE350AC42979701200CE33D5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC32979701200CE33D5 /* AppConstants.swift */; };
+		FE350AC62979705F00CE33D5 /* ViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC52979705F00CE33D5 /* ViewController+Navigation.swift */; };
+		FE350AC8297978B100CE33D5 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */; };
+		FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */; };
+		FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */; };
+		FE350AE829799E0C00CE33D5 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AE729799E0C00CE33D5 /* Others.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +46,27 @@
 
 /* Begin PBXFileReference section */
 		FE350A752979115600CE33D5 /* NasaGallaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaGallaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE350A782979115600CE33D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE350A7A2979115600CE33D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE350A7C2979115600CE33D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FE350A7F2979115600CE33D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE350A812979115C00CE33D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE350A842979115C00CE33D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE350A862979115C00CE33D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE350A8B2979115D00CE33D5 /* NasaGallaryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaGallaryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE350A8F2979115D00CE33D5 /* NasaGallaryAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGallaryAppTests.swift; sourceTree = "<group>"; };
 		FE350A952979115D00CE33D5 /* NasaGallaryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaGallaryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE350A992979115D00CE33D5 /* NasaGallaryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGallaryAppUITests.swift; sourceTree = "<group>"; };
 		FE350A9B2979115D00CE33D5 /* NasaGallaryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGallaryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE350AAB297960D900CE33D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE350AAC297960DA00CE33D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE350AB7297964D400CE33D5 /* NetworkHelperConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelperConstants.swift; sourceTree = "<group>"; };
+		FE350AB9297964F700CE33D5 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		FE350ABB2979651000CE33D5 /* NewtorkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtorkHelper.swift; sourceTree = "<group>"; };
+		FE350ABD2979655A00CE33D5 /* NetworkErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorProtocol.swift; sourceTree = "<group>"; };
+		FE350ABF297966E300CE33D5 /* AppObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppObserver.swift; sourceTree = "<group>"; };
+		FE350AC129796FE100CE33D5 /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
+		FE350AC32979701200CE33D5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FE350AC52979705F00CE33D5 /* ViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Navigation.swift"; sourceTree = "<group>"; };
+		FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE350AE729799E0C00CE33D5 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +117,11 @@
 		FE350A772979115600CE33D5 /* NasaGallaryApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE350A782979115600CE33D5 /* AppDelegate.swift */,
-				FE350A7A2979115600CE33D5 /* SceneDelegate.swift */,
-				FE350A7C2979115600CE33D5 /* ViewController.swift */,
-				FE350A7E2979115600CE33D5 /* Main.storyboard */,
+				FE350AB32979611B00CE33D5 /* Network */,
+				FE350AB22979611300CE33D5 /* Helper */,
+				FE350AAF297960EC00CE33D5 /* App */,
+				FE350AAA2979535600CE33D5 /* Delegate */,
 				FE350A812979115C00CE33D5 /* Assets.xcassets */,
-				FE350A832979115C00CE33D5 /* LaunchScreen.storyboard */,
 				FE350A862979115C00CE33D5 /* Info.plist */,
 			);
 			path = NasaGallaryApp;
@@ -125,6 +142,88 @@
 				FE350A9B2979115D00CE33D5 /* NasaGallaryAppUITestsLaunchTests.swift */,
 			);
 			path = NasaGallaryAppUITests;
+			sourceTree = "<group>";
+		};
+		FE350AAA2979535600CE33D5 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FE350AD429797CE600CE33D5 /* AppTransition */,
+				FE350AAB297960D900CE33D5 /* AppDelegate.swift */,
+				FE350AAC297960DA00CE33D5 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FE350AAF297960EC00CE33D5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE350ADC29797E7800CE33D5 /* LaunchScreen */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE350AB22979611300CE33D5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FE350AB6297964AC00CE33D5 /* Utility */,
+				FE350AB5297964A400CE33D5 /* Constants */,
+				FE350AB42979649700CE33D5 /* Observer */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FE350AB32979611B00CE33D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FE350AB7297964D400CE33D5 /* NetworkHelperConstants.swift */,
+				FE350AB9297964F700CE33D5 /* NetworkServiceProtocol.swift */,
+				FE350ABB2979651000CE33D5 /* NewtorkHelper.swift */,
+				FE350ABD2979655A00CE33D5 /* NetworkErrorProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FE350AB42979649700CE33D5 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				FE350ABF297966E300CE33D5 /* AppObserver.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
+		FE350AB5297964A400CE33D5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FE350AC32979701200CE33D5 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FE350AB6297964AC00CE33D5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FE350AC129796FE100CE33D5 /* UIView+Loading.swift */,
+				FE350AC52979705F00CE33D5 /* ViewController+Navigation.swift */,
+				FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */,
+				FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */,
+				FE350AE729799E0C00CE33D5 /* Others.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FE350AD429797CE600CE33D5 /* AppTransition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppTransition;
+			sourceTree = "<group>";
+		};
+		FE350ADC29797E7800CE33D5 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +330,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE350AA92979496E00CE33D5 /* LaunchScreen.storyboard in Resources */,
+				FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */,
 				FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */,
-				FE350A802979115600CE33D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +356,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE350A7D2979115600CE33D5 /* ViewController.swift in Sources */,
-				FE350A792979115600CE33D5 /* AppDelegate.swift in Sources */,
-				FE350A7B2979115600CE33D5 /* SceneDelegate.swift in Sources */,
+				FE350AC8297978B100CE33D5 /* UIApplicationExtension.swift in Sources */,
+				FE350AC0297966E300CE33D5 /* AppObserver.swift in Sources */,
+				FE350AC62979705F00CE33D5 /* ViewController+Navigation.swift in Sources */,
+				FE350AAD297960DA00CE33D5 /* AppDelegate.swift in Sources */,
+				FE350AE829799E0C00CE33D5 /* Others.swift in Sources */,
+				FE350AC229796FE100CE33D5 /* UIView+Loading.swift in Sources */,
+				FE350ABC2979651000CE33D5 /* NewtorkHelper.swift in Sources */,
+				FE350AB8297964D400CE33D5 /* NetworkHelperConstants.swift in Sources */,
+				FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */,
+				FE350ABA297964F700CE33D5 /* NetworkServiceProtocol.swift in Sources */,
+				FE350AAE297960DA00CE33D5 /* SceneDelegate.swift in Sources */,
+				FE350ABE2979655A00CE33D5 /* NetworkErrorProtocol.swift in Sources */,
+				FE350AC42979701200CE33D5 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +403,6 @@
 			targetProxy = FE350A962979115D00CE33D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FE350A7E2979115600CE33D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE350A7F2979115600CE33D5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FE350A832979115C00CE33D5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE350A842979115C00CE33D5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FE350A9D2979115D00CE33D5 /* Debug */ = {
@@ -457,7 +546,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -486,7 +575,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

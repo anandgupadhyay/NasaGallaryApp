@@ -7,14 +7,19 @@
 
 import UIKit
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    private var window: UIWindow? {
+        UIApplication.shared.delegate?.window ?? UIWindow(frame: UIScreen.main.bounds)
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Thread.sleep(forTimeInterval: 1.0)
+        Thread.sleep(forTimeInterval: 0.5)
+//        initialAppSetup()
         return true
     }
 
@@ -31,7 +36,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    //setup Winwo with initial controller
+    func initialAppSetup(){
+//        let viewController = GallaryViewController()//.setupModule()
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navController = storyboard.instantiateInitialViewController()
+        navController?.modalPresentationStyle = .formSheet
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+        
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil]; UINavigationController *navigationController1 = [storyboard instantiateInitialViewController]; navigationController1. modalPresentationStyle = UIModalPresentationFormSheet; navigationController1
+    }
 }
 
