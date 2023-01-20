@@ -71,13 +71,15 @@ class GallaryViewController: UIViewController {
         formatter.dateFormat = CONST_Date_Format
         
         self.nasaPicVm.pictureListModel.value = self.nasaPicVm.pictureListModel.value?.sorted { first, second -> Bool in
-            guard let firstCreatedAt = first.date as? String,
-                  let firstCreatedAtDate = formatter.date(from: firstCreatedAt),
-                  let secondCreatedAt = second.date as? String,
-                  let secondCreatedAtDate = formatter.date(from: secondCreatedAt) else {
-                return false
-            }
-            return firstCreatedAtDate > secondCreatedAtDate
+//            guard let firstCreatedAt = first.date as? String,
+                  let firstCreatedAtDate = formatter.date(from: first.date)!
+//                  let secondCreatedAt = second.date as? String,
+                  let secondCreatedAtDate = formatter.date(from: second.date)!
+//            else {
+//                return false
+//            }
+            return firstCreatedAtDate >= secondCreatedAtDate
+
         }
         
     }
