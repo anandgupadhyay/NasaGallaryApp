@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0C06FE297A420700C83FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0C06FD297A420700C83FA4 /* Main.storyboard */; };
+		FE0C0700297A421600C83FA4 /* GallaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C06FF297A421600C83FA4 /* GallaryViewController.swift */; };
+		FE0C0703297A425800C83FA4 /* NasaPictureElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0702297A425800C83FA4 /* NasaPictureElement.swift */; };
+		FE0C0705297A428300C83FA4 /* NasaPictureVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0704297A428300C83FA4 /* NasaPictureVM.swift */; };
+		FE0C0709297A42FF00C83FA4 /* NasaPictureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0708297A42FF00C83FA4 /* NasaPictureCollectionView.swift */; };
+		FE0C070B297A434B00C83FA4 /* PictureCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C070A297A434B00C83FA4 /* PictureCollectionDataSource.swift */; };
+		FE0C070D297A435E00C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C070C297A435E00C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */; };
 		FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE350A812979115C00CE33D5 /* Assets.xcassets */; };
 		FE350A902979115D00CE33D5 /* NasaGallaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A8F2979115D00CE33D5 /* NasaGallaryAppTests.swift */; };
 		FE350A9A2979115D00CE33D5 /* NasaGallaryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A992979115D00CE33D5 /* NasaGallaryAppUITests.swift */; };
@@ -45,6 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE0C06FD297A420700C83FA4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FE0C06FF297A421600C83FA4 /* GallaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryViewController.swift; sourceTree = "<group>"; };
+		FE0C0702297A425800C83FA4 /* NasaPictureElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPictureElement.swift; sourceTree = "<group>"; };
+		FE0C0704297A428300C83FA4 /* NasaPictureVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPictureVM.swift; sourceTree = "<group>"; };
+		FE0C0708297A42FF00C83FA4 /* NasaPictureCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPictureCollectionView.swift; sourceTree = "<group>"; };
+		FE0C070A297A434B00C83FA4 /* PictureCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionDataSource.swift; sourceTree = "<group>"; };
+		FE0C070C297A435E00C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureUICollectionViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
 		FE350A752979115600CE33D5 /* NasaGallaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaGallaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE350A812979115C00CE33D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE350A862979115C00CE33D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +108,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0C06F9297A41C100C83FA4 /* GallaryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE0C0706297A429F00C83FA4 /* CollectionView */,
+				FE0C06FD297A420700C83FA4 /* Main.storyboard */,
+				FE0C06FF297A421600C83FA4 /* GallaryViewController.swift */,
+			);
+			path = GallaryScreen;
+			sourceTree = "<group>";
+		};
+		FE0C06FA297A41D000C83FA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE0C0702297A425800C83FA4 /* NasaPictureElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE0C06FB297A41DD00C83FA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE0C06F9297A41C100C83FA4 /* GallaryScreen */,
+				FE350ADC29797E7800CE33D5 /* LaunchScreen */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE0C06FC297A41E700C83FA4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE0C0704297A428300C83FA4 /* NasaPictureVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE0C0706297A429F00C83FA4 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FE0C0707297A42A700C83FA4 /* CollectionViewCell */,
+				FE0C0708297A42FF00C83FA4 /* NasaPictureCollectionView.swift */,
+				FE0C070A297A434B00C83FA4 /* PictureCollectionDataSource.swift */,
+				FE0C070C297A435E00C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		FE0C0707297A42A700C83FA4 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		FE350A6C2979115600CE33D5 = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +224,9 @@
 		FE350AAF297960EC00CE33D5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FE350ADC29797E7800CE33D5 /* LaunchScreen */,
+				FE0C06FC297A41E700C83FA4 /* ViewModel */,
+				FE0C06FB297A41DD00C83FA4 /* View */,
+				FE0C06FA297A41D000C83FA4 /* Model */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -330,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0C06FE297A420700C83FA4 /* Main.storyboard in Resources */,
 				FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */,
 				FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */,
 			);
@@ -356,8 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0C0705297A428300C83FA4 /* NasaPictureVM.swift in Sources */,
 				FE350AC8297978B100CE33D5 /* UIApplicationExtension.swift in Sources */,
 				FE350AC0297966E300CE33D5 /* AppObserver.swift in Sources */,
+				FE0C070D297A435E00C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift in Sources */,
 				FE350AC62979705F00CE33D5 /* ViewController+Navigation.swift in Sources */,
 				FE350AAD297960DA00CE33D5 /* AppDelegate.swift in Sources */,
 				FE350AE829799E0C00CE33D5 /* Others.swift in Sources */,
@@ -365,10 +437,14 @@
 				FE350ABC2979651000CE33D5 /* NewtorkHelper.swift in Sources */,
 				FE350AB8297964D400CE33D5 /* NetworkHelperConstants.swift in Sources */,
 				FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */,
+				FE0C0709297A42FF00C83FA4 /* NasaPictureCollectionView.swift in Sources */,
 				FE350ABA297964F700CE33D5 /* NetworkServiceProtocol.swift in Sources */,
 				FE350AAE297960DA00CE33D5 /* SceneDelegate.swift in Sources */,
+				FE0C0703297A425800C83FA4 /* NasaPictureElement.swift in Sources */,
 				FE350ABE2979655A00CE33D5 /* NetworkErrorProtocol.swift in Sources */,
 				FE350AC42979701200CE33D5 /* AppConstants.swift in Sources */,
+				FE0C0700297A421600C83FA4 /* GallaryViewController.swift in Sources */,
+				FE0C070B297A434B00C83FA4 /* PictureCollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
