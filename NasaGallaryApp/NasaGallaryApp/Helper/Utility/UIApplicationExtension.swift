@@ -11,10 +11,6 @@ import Foundation
 
 extension UIApplication {
     
-    static var appName: String {
-            Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as? String ?? ProcessInfo.processInfo.processName
-    }
-    
     class func getTopViewController(base: UIViewController?) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return getTopViewController(base: nav.visibleViewController)

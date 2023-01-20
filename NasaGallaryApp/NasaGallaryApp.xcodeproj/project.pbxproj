@@ -11,11 +11,12 @@
 		FE0C0705297A428300C83FA4 /* NasaPictureVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0704297A428300C83FA4 /* NasaPictureVM.swift */; };
 		FE0C0709297A42FF00C83FA4 /* NasaPictureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0708297A42FF00C83FA4 /* NasaPictureCollectionView.swift */; };
 		FE0C070F297A487A00C83FA4 /* NasaPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C070E297A487A00C83FA4 /* NasaPhotoCell.swift */; };
-		FE0C0712297A49CD00C83FA4 /* PinterestLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0711297A49CD00C83FA4 /* PinterestLayoutDelegate.swift */; };
 		FE0C0715297A4A3500C83FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0C0714297A4A3500C83FA4 /* Main.storyboard */; };
 		FE0C0719297A4A9000C83FA4 /* PictureCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0717297A4A9000C83FA4 /* PictureCollectionDataSource.swift */; };
 		FE0C071A297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0718297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */; };
 		FE0C071D297A4AC700C83FA4 /* GallaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C071C297A4AC700C83FA4 /* GallaryViewController.swift */; };
+		FE0C0720297A97D100C83FA4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C071F297A97D100C83FA4 /* PhotoDetailViewController.swift */; };
+		FE0C0722297A9D8D00C83FA4 /* PictureCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0721297A9D8D00C83FA4 /* PictureCollectionDelegate.swift */; };
 		FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE350A812979115C00CE33D5 /* Assets.xcassets */; };
 		FE350A902979115D00CE33D5 /* NasaGallaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A8F2979115D00CE33D5 /* NasaGallaryAppTests.swift */; };
 		FE350A9A2979115D00CE33D5 /* NasaGallaryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A992979115D00CE33D5 /* NasaGallaryAppUITests.swift */; };
@@ -29,7 +30,7 @@
 		FE350AC0297966E300CE33D5 /* AppObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ABF297966E300CE33D5 /* AppObserver.swift */; };
 		FE350AC229796FE100CE33D5 /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC129796FE100CE33D5 /* UIView+Loading.swift */; };
 		FE350AC42979701200CE33D5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC32979701200CE33D5 /* AppConstants.swift */; };
-		FE350AC62979705F00CE33D5 /* ViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC52979705F00CE33D5 /* ViewController+Navigation.swift */; };
+		FE350AC62979705F00CE33D5 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC52979705F00CE33D5 /* UIViewController+Navigation.swift */; };
 		FE350AC8297978B100CE33D5 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */; };
 		FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */; };
 		FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */; };
@@ -58,11 +59,12 @@
 		FE0C0704297A428300C83FA4 /* NasaPictureVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPictureVM.swift; sourceTree = "<group>"; };
 		FE0C0708297A42FF00C83FA4 /* NasaPictureCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPictureCollectionView.swift; sourceTree = "<group>"; };
 		FE0C070E297A487A00C83FA4 /* NasaPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPhotoCell.swift; sourceTree = "<group>"; };
-		FE0C0711297A49CD00C83FA4 /* PinterestLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayoutDelegate.swift; sourceTree = "<group>"; };
 		FE0C0714297A4A3500C83FA4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FE0C0717297A4A9000C83FA4 /* PictureCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCollectionDataSource.swift; sourceTree = "<group>"; };
 		FE0C0718297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureUICollectionViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
 		FE0C071C297A4AC700C83FA4 /* GallaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GallaryViewController.swift; sourceTree = "<group>"; };
+		FE0C071F297A97D100C83FA4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		FE0C0721297A9D8D00C83FA4 /* PictureCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionDelegate.swift; sourceTree = "<group>"; };
 		FE350A752979115600CE33D5 /* NasaGallaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaGallaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE350A812979115C00CE33D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE350A862979115C00CE33D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		FE350ABF297966E300CE33D5 /* AppObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppObserver.swift; sourceTree = "<group>"; };
 		FE350AC129796FE100CE33D5 /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		FE350AC32979701200CE33D5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		FE350AC52979705F00CE33D5 /* ViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Navigation.swift"; sourceTree = "<group>"; };
+		FE350AC52979705F00CE33D5 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		FE0C06FB297A41DD00C83FA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE0C071E297A97A900C83FA4 /* DetailScreen */,
 				FE0C06F9297A41C100C83FA4 /* GallaryScreen */,
 				FE350ADC29797E7800CE33D5 /* LaunchScreen */,
 			);
@@ -169,7 +172,6 @@
 		FE0C0710297A49B400C83FA4 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				FE0C0711297A49CD00C83FA4 /* PinterestLayoutDelegate.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 			children = (
 				FE0C0717297A4A9000C83FA4 /* PictureCollectionDataSource.swift */,
 				FE0C0718297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */,
+				FE0C0721297A9D8D00C83FA4 /* PictureCollectionDelegate.swift */,
 			);
 			path = Delegate_DataSource;
 			sourceTree = "<group>";
@@ -197,6 +200,14 @@
 				FE0C071C297A4AC700C83FA4 /* GallaryViewController.swift */,
 			);
 			path = GallaryScreenViewController;
+			sourceTree = "<group>";
+		};
+		FE0C071E297A97A900C83FA4 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE0C071F297A97D100C83FA4 /* PhotoDetailViewController.swift */,
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 		FE350A6C2979115600CE33D5 = {
@@ -310,7 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				FE350AC129796FE100CE33D5 /* UIView+Loading.swift */,
-				FE350AC52979705F00CE33D5 /* ViewController+Navigation.swift */,
+				FE350AC52979705F00CE33D5 /* UIViewController+Navigation.swift */,
 				FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */,
 				FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */,
 				FE350AE729799E0C00CE33D5 /* Others.swift */,
@@ -467,19 +478,20 @@
 				FE0C0705297A428300C83FA4 /* NasaPictureVM.swift in Sources */,
 				FE350AC8297978B100CE33D5 /* UIApplicationExtension.swift in Sources */,
 				FE350AC0297966E300CE33D5 /* AppObserver.swift in Sources */,
-				FE0C0712297A49CD00C83FA4 /* PinterestLayoutDelegate.swift in Sources */,
-				FE350AC62979705F00CE33D5 /* ViewController+Navigation.swift in Sources */,
+				FE350AC62979705F00CE33D5 /* UIViewController+Navigation.swift in Sources */,
 				FE0C0719297A4A9000C83FA4 /* PictureCollectionDataSource.swift in Sources */,
 				FE350AAD297960DA00CE33D5 /* AppDelegate.swift in Sources */,
 				FE350AE829799E0C00CE33D5 /* Others.swift in Sources */,
 				FE0C071A297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift in Sources */,
 				FE350AC229796FE100CE33D5 /* UIView+Loading.swift in Sources */,
 				FE350ABC2979651000CE33D5 /* NewtorkHelper.swift in Sources */,
+				FE0C0722297A9D8D00C83FA4 /* PictureCollectionDelegate.swift in Sources */,
 				FE350AB8297964D400CE33D5 /* NetworkHelperConstants.swift in Sources */,
 				FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */,
 				FE0C070F297A487A00C83FA4 /* NasaPhotoCell.swift in Sources */,
 				FE0C0709297A42FF00C83FA4 /* NasaPictureCollectionView.swift in Sources */,
 				FE350ABA297964F700CE33D5 /* NetworkServiceProtocol.swift in Sources */,
+				FE0C0720297A97D100C83FA4 /* PhotoDetailViewController.swift in Sources */,
 				FE350AAE297960DA00CE33D5 /* SceneDelegate.swift in Sources */,
 				FE0C071D297A4AC700C83FA4 /* GallaryViewController.swift in Sources */,
 				FE0C0703297A425800C83FA4 /* NasaPictureElement.swift in Sources */,
@@ -646,11 +658,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NasaGallaryApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Nasa Gallary";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -675,11 +688,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NasaGallaryApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Nasa Gallary";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -18,7 +18,7 @@ class NasaPictureVM {
     internal var isToShowLoader: AppObserver<Bool> = AppObserver(false)
     internal let pictureListModel: AppObserver<NasaPicture?> = AppObserver(nil)
     
-    internal func fetchMovieList(params:[String:Any], complete: @escaping (AppObserver<NasaPicture?>)->()) {
+    internal func fetchPhotos(params:[String:Any], complete: @escaping (AppObserver<NasaPicture?>)->()) {
             isToShowLoader.value = true
             
         self.apiService.startNetworkTask(urlStr: NetworkHelperConstants.movieListURL, params: [:]) { result in

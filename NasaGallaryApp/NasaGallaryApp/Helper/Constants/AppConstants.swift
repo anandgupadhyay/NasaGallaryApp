@@ -14,6 +14,5 @@ let CONST_Date_Format = "YYYY-MM-DD"//2019-12-01
  
   //Model Created using https://app.quicktype.io/
   //stackoverflow.com
- 
 
  */
