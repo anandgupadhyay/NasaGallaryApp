@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView{
-
+    
     func showLoading(activityColor: UIColor, backgroundColor: UIColor) {
         let backgroundView = UIView()
         backgroundView.frame = CGRect.init(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
@@ -34,5 +34,22 @@ extension UIView{
             background.removeFromSuperview()
         }
         self.isUserInteractionEnabled = true
+    }
+}
+
+//NSShadow
+extension UIView{
+    
+    open func configureDropShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        layer.shadowRadius = 6.0
+        layer.shadowOpacity = 0.4
+        layer.masksToBounds = true
+    }
+
+    /// A convenience function to turn off drop shadow
+    open func configureNoDropShadow() {
+        layer.shadowOpacity = 0
     }
 }
