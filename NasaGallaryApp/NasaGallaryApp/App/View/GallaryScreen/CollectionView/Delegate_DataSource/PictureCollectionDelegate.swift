@@ -11,11 +11,18 @@ import UIKit
 extension GallaryViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as? PhotoDetailViewController {
-            detailVC.selectedIndexPath = indexPath
-            detailVC.nasaPicVm = self.nasaPicVm
-            self.pushVC(destinationVC: detailVC)
+        //Detail VC
+//        if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as? PhotoDetailViewController {
+//            detailVC.selectedIndexPath = indexPath
+//            detailVC.nasaPicVm = self.nasaPicVm
+//            self.pushVC(destinationVC: detailVC)
+//        }
+        
+        //Photo Page
+        if let photoPageVC = self.storyboard?.instantiateViewController(withIdentifier: "PhotoPageViewController") as? PhotoPageViewController {
+            photoPageVC.selectedIndexPath = indexPath
+            photoPageVC.nasaPicVm = self.nasaPicVm
+            self.pushVC(destinationVC: photoPageVC)
         }
     }
-
 }

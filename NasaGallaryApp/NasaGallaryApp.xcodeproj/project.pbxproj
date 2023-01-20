@@ -15,7 +15,6 @@
 		FE0C0719297A4A9000C83FA4 /* PictureCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0717297A4A9000C83FA4 /* PictureCollectionDataSource.swift */; };
 		FE0C071A297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0718297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */; };
 		FE0C071D297A4AC700C83FA4 /* GallaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C071C297A4AC700C83FA4 /* GallaryViewController.swift */; };
-		FE0C0720297A97D100C83FA4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C071F297A97D100C83FA4 /* PhotoDetailViewController.swift */; };
 		FE0C0722297A9D8D00C83FA4 /* PictureCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C0721297A9D8D00C83FA4 /* PictureCollectionDelegate.swift */; };
 		FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE350A812979115C00CE33D5 /* Assets.xcassets */; };
 		FE350A902979115D00CE33D5 /* NasaGallaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350A8F2979115D00CE33D5 /* NasaGallaryAppTests.swift */; };
@@ -35,6 +34,10 @@
 		FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */; };
 		FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */; };
 		FE350AE829799E0C00CE33D5 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AE729799E0C00CE33D5 /* Others.swift */; };
+		FEAC8B28297ACE03001D57A4 /* PhotoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC8B27297ACE03001D57A4 /* PhotoPageView.swift */; };
+		FEAC8B2C297ACE55001D57A4 /* PhotoPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEAC8B2B297ACE55001D57A4 /* PhotoPageView.xib */; };
+		FEAC8B2F297AD180001D57A4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC8B2E297AD180001D57A4 /* PhotoDetailViewController.swift */; };
+		FEAC8B31297AD1C4001D57A4 /* PhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC8B30297AD1C4001D57A4 /* PhotoPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,6 @@
 		FE0C0717297A4A9000C83FA4 /* PictureCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCollectionDataSource.swift; sourceTree = "<group>"; };
 		FE0C0718297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureUICollectionViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
 		FE0C071C297A4AC700C83FA4 /* GallaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GallaryViewController.swift; sourceTree = "<group>"; };
-		FE0C071F297A97D100C83FA4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		FE0C0721297A9D8D00C83FA4 /* PictureCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionDelegate.swift; sourceTree = "<group>"; };
 		FE350A752979115600CE33D5 /* NasaGallaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaGallaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE350A812979115C00CE33D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +89,10 @@
 		FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE350AE729799E0C00CE33D5 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
+		FEAC8B27297ACE03001D57A4 /* PhotoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageView.swift; sourceTree = "<group>"; };
+		FEAC8B2B297ACE55001D57A4 /* PhotoPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPageView.xib; sourceTree = "<group>"; };
+		FEAC8B2E297AD180001D57A4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		FEAC8B30297AD1C4001D57A4 /* PhotoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +211,8 @@
 		FE0C071E297A97A900C83FA4 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE0C071F297A97D100C83FA4 /* PhotoDetailViewController.swift */,
+				FEAC8B2D297AD166001D57A4 /* ViewController */,
+				FEAC8B26297ACADB001D57A4 /* PhotoPageView */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -344,6 +351,24 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		FEAC8B26297ACADB001D57A4 /* PhotoPageView */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC8B27297ACE03001D57A4 /* PhotoPageView.swift */,
+				FEAC8B2B297ACE55001D57A4 /* PhotoPageView.xib */,
+			);
+			path = PhotoPageView;
+			sourceTree = "<group>";
+		};
+		FEAC8B2D297AD166001D57A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEAC8B2E297AD180001D57A4 /* PhotoDetailViewController.swift */,
+				FEAC8B30297AD1C4001D57A4 /* PhotoPageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -448,6 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAC8B2C297ACE55001D57A4 /* PhotoPageView.xib in Resources */,
 				FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */,
 				FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */,
 				FE0C0715297A4A3500C83FA4 /* Main.storyboard in Resources */,
@@ -479,6 +505,7 @@
 				FE350AC8297978B100CE33D5 /* UIApplicationExtension.swift in Sources */,
 				FE350AC0297966E300CE33D5 /* AppObserver.swift in Sources */,
 				FE350AC62979705F00CE33D5 /* UIViewController+Navigation.swift in Sources */,
+				FEAC8B28297ACE03001D57A4 /* PhotoPageView.swift in Sources */,
 				FE0C0719297A4A9000C83FA4 /* PictureCollectionDataSource.swift in Sources */,
 				FE350AAD297960DA00CE33D5 /* AppDelegate.swift in Sources */,
 				FE350AE829799E0C00CE33D5 /* Others.swift in Sources */,
@@ -488,11 +515,12 @@
 				FE0C0722297A9D8D00C83FA4 /* PictureCollectionDelegate.swift in Sources */,
 				FE350AB8297964D400CE33D5 /* NetworkHelperConstants.swift in Sources */,
 				FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */,
+				FEAC8B31297AD1C4001D57A4 /* PhotoPageViewController.swift in Sources */,
 				FE0C070F297A487A00C83FA4 /* NasaPhotoCell.swift in Sources */,
 				FE0C0709297A42FF00C83FA4 /* NasaPictureCollectionView.swift in Sources */,
 				FE350ABA297964F700CE33D5 /* NetworkServiceProtocol.swift in Sources */,
-				FE0C0720297A97D100C83FA4 /* PhotoDetailViewController.swift in Sources */,
 				FE350AAE297960DA00CE33D5 /* SceneDelegate.swift in Sources */,
+				FEAC8B2F297AD180001D57A4 /* PhotoDetailViewController.swift in Sources */,
 				FE0C071D297A4AC700C83FA4 /* GallaryViewController.swift in Sources */,
 				FE0C0703297A425800C83FA4 /* NasaPictureElement.swift in Sources */,
 				FE350ABE2979655A00CE33D5 /* NetworkErrorProtocol.swift in Sources */,

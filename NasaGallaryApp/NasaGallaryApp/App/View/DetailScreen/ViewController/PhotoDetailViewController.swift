@@ -37,7 +37,7 @@ class PhotoDetailViewController: UIViewController {
             self.lblDate.text = ""
         }
         self.txtExplanation.text = nasaPhoto.explanation
-            loadImage(hdUrl: nasaPhoto.hdurl)
+            loadImage(hdUrl: nasaPhoto.url)
         }
     }
     
