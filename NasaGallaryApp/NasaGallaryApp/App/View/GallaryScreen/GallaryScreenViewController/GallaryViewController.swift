@@ -10,9 +10,9 @@ import UIKit
 
 class GallaryViewController: UIViewController {
 
-    @IBOutlet weak var pictureCollectionView: UICollectionView!
+    @IBOutlet weak var nasaPictureCollectionView: UICollectionView!
 
-    private var nasaPicVm = NasaPictureVM()//Instantiate View Model
+    var nasaPicVm = NasaPictureVM()//Instantiate View Model
     override func viewDidLoad(){
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,8 +35,8 @@ class GallaryViewController: UIViewController {
         
         self.view.showLoading(activityColor: UIColor.white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         nasaPicVm.fetchMovieList(params: [:]) { onComplete in
-            let rowCount: Int = self.nasaPicVm.pictureListModel.value?.count ?? 0
-            print(self.nasaPicVm.pictureListModel.value!)
+            let rowCount: Int =  self.nasaPicVm.pictureListModel.value?.count ?? 0
+//            print(self.nasaPicVm.pictureListModel.value!)
             if(rowCount == 0){
                 self.openAlert(title: UIApplication.appName, message: "No Pictures found", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default],actions: [
                     {_ in
@@ -49,21 +49,36 @@ class GallaryViewController: UIViewController {
         //bind observers
         nasaPicVm.pictureListModel.bind { [weak self] newModel in
             DispatchQueue.main.async {
-                self?.pictureCollectionView.reloadData()
+                
+                self?.sortPhotosBy(sortKey: "date")
+                self?.nasaPictureCollectionView.reloadData()
                 self?.view.hideLoading()
-//                self?.tblMovieList.reloadData()
-//                self?.tblMovieList.stopLoading()//stop load more indicator
             }
         }
         
         nasaPicVm.isToShowLoader.bind { [weak self] _ in
             DispatchQueue.main.async {
-                self?.pictureCollectionView.reloadData()
+                self?.nasaPictureCollectionView.reloadData()
                 self?.view.hideLoading()
 //                self?.view.hideLoading()
             }
         }
+    }
+    
+    func sortPhotosBy(sortKey: String){
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = CONST_Date_Format
+        
+        self.nasaPicVm.pictureListModel.value = self.nasaPicVm.pictureListModel.value?.sorted { first, second -> Bool in
+            guard let firstCreatedAt = first.date as? String,
+                  let firstCreatedAtDate = formatter.date(from: firstCreatedAt),
+                  let secondCreatedAt = second.date as? String,
+                  let secondCreatedAtDate = formatter.date(from: secondCreatedAt) else {
+                return false
+            }
+            return firstCreatedAtDate > secondCreatedAtDate
+        }
         
     }
 }
@@ -71,46 +86,27 @@ class GallaryViewController: UIViewController {
 
 extension GallaryViewController{
     private func setUpCollectionView() {
-         /// 1
-        pictureCollectionView.register(UICollectionViewCell.self,
-                 forCellWithReuseIdentifier: "cell")
         
-         /// 2
-        pictureCollectionView.delegate = self
-        pictureCollectionView.dataSource = self
-
-         /// 3
+        nasaPictureCollectionView.delegate = self
+        nasaPictureCollectionView.dataSource = self
          let layout = UICollectionViewFlowLayout()
          layout.scrollDirection = .vertical
-         /// 4
          layout.minimumLineSpacing = 8
-         /// 5
          layout.minimumInteritemSpacing = 4
-
-         /// 6
-        pictureCollectionView.setCollectionViewLayout(layout, animated: true)
-       }
+        nasaPictureCollectionView.setCollectionViewLayout(layout, animated: true)
+        nasaPictureCollectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
+        nasaPictureCollectionView?.backgroundColor = .clear
+    }
 }
 
 extension GallaryViewController{
     
     func addRefreshButton(){
-    //add Refresh button with Action
-//    if #available(iOS 14.0, *){
             let refreshAction = UIAction(handler: { [weak self] _ in
                //perform action here
                 self?.loadNasaPictureData()
             })
             let refreshBarButtonItem = UIBarButtonItem(systemItem: .refresh, primaryAction: refreshAction, menu: nil)
             self.navigationItem.rightBarButtonItem  = refreshBarButtonItem
-        
-//    }else{
-//        let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "searchIcon"), style: .plain, target: self, action: #selector(onSearchButtonClicked))
-//        self.navigationItem.rightBarButtonItem  = searchBarButtonItem
-//    }
-    }
-    
-    @objc func onSearchButtonClicked(_ sender: Any){
-        print("SearchButtonClicked")
     }
 }

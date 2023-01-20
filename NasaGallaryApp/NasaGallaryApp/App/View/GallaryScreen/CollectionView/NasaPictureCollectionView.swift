@@ -16,5 +16,4 @@ class NasaPictureCollectionView: UICollectionView {
         // Drawing code
     }
     */
-
 }

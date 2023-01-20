@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Odp-sc-GAE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GXa-DJ-ncS">
+            <objects>
+                <navigationController id="Odp-sc-GAE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z7i-8m-ISd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ui6-p8-81o" kind="relationship" relationship="rootViewController" id="Z0W-FE-xwq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXk-KG-n2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1367" y="50"/>
+        </scene>
+        <!--Gallary View Controller-->
+        <scene sceneID="q73-uY-IcJ">
+            <objects>
+                <viewController storyboardIdentifier="GallaryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ui6-p8-81o" customClass="GallaryViewController" customModule="NasaGallaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tYE-QD-QA7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ylc-KF-mFh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="WZQ-ez-4Gj"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NasaPhotoCell" id="2bc-7G-yAX" customClass="NasaPhotoCell" customModule="NasaGallaryApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3eW-Xs-jKM" userLabel="Container View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BQ3-ZE-mfw" customClass="MyExtendedImage" customModule="NasaGallaryApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="127"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz6-04-WC7">
+                                                            <rect key="frame" x="4" y="137" width="172" height="17"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Comment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z3-YI-Ekr">
+                                                            <rect key="frame" x="4" y="156" width="172" height="14"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                                    <color key="tintColor" systemColor="systemBrownColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tz6-04-WC7" firstAttribute="leading" secondItem="3eW-Xs-jKM" secondAttribute="leading" constant="4" id="4vZ-Jb-GmT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BQ3-ZE-mfw" secondAttribute="trailing" id="6Zz-S0-wlF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tz6-04-WC7" secondAttribute="trailing" constant="4" id="Bwx-s2-OHJ"/>
+                                                        <constraint firstItem="BQ3-ZE-mfw" firstAttribute="top" secondItem="3eW-Xs-jKM" secondAttribute="top" id="DPQ-ep-lFn"/>
+                                                        <constraint firstItem="2Z3-YI-Ekr" firstAttribute="top" secondItem="tz6-04-WC7" secondAttribute="bottom" constant="2" id="OAK-zJ-krr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Z3-YI-Ekr" secondAttribute="trailing" constant="4" id="YPE-Ug-Bcl"/>
+                                                        <constraint firstItem="2Z3-YI-Ekr" firstAttribute="leading" secondItem="3eW-Xs-jKM" secondAttribute="leading" constant="4" id="dtv-ij-v4p"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2Z3-YI-Ekr" secondAttribute="bottom" constant="10" id="k4O-f4-QWQ"/>
+                                                        <constraint firstItem="BQ3-ZE-mfw" firstAttribute="bottom" secondItem="tz6-04-WC7" secondAttribute="top" constant="-10" id="owh-HP-Dup"/>
+                                                        <constraint firstItem="BQ3-ZE-mfw" firstAttribute="leading" secondItem="3eW-Xs-jKM" secondAttribute="leading" id="qTF-VQ-kL2"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3eW-Xs-jKM" firstAttribute="leading" secondItem="2bc-7G-yAX" secondAttribute="leading" id="Beg-LG-1Wz"/>
+                                            <constraint firstAttribute="bottom" secondItem="3eW-Xs-jKM" secondAttribute="bottom" id="Uzu-KD-VUZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="3eW-Xs-jKM" secondAttribute="trailing" id="VFv-HB-a6k"/>
+                                            <constraint firstItem="3eW-Xs-jKM" firstAttribute="top" secondItem="2bc-7G-yAX" secondAttribute="top" id="jTF-RN-Iul"/>
+                                        </constraints>
+                                        <size key="customSize" width="180" height="180"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="3eW-Xs-jKM" id="KRl-VT-LKw"/>
+                                            <outlet property="imgPhoto" destination="BQ3-ZE-mfw" id="hcJ-E5-Clt"/>
+                                            <outlet property="lblDate" destination="2Z3-YI-Ekr" id="p9Y-Bk-ncS"/>
+                                            <outlet property="lblTitle" destination="tz6-04-WC7" id="uHf-An-fb8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1tM-wq-HAG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y1G-q1-L6C"/>
+                    <connections>
+                        <outlet property="nasaPictureCollectionView" destination="ylc-KF-mFh" id="NYf-Jw-s7Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TmP-1J-y4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694.20289855072474" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
