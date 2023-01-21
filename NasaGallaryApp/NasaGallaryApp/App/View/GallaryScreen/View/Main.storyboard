@@ -15,7 +15,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z7i-8m-ISd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="GallaryNavigationBar"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaGallryNavigationController"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Ui6-p8-81o" kind="relationship" relationship="rootViewController" id="Z0W-FE-xwq"/>
                     </connections>
@@ -32,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ylc-KF-mFh">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="NasaGallaryCollectionView" dataMode="prototypes" id="ylc-KF-mFh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,6 +98,9 @@
                                             <constraint firstItem="3eW-Xs-jKM" firstAttribute="top" secondItem="2bc-7G-yAX" secondAttribute="top" id="jTF-RN-Iul"/>
                                         </constraints>
                                         <size key="customSize" width="180" height="180"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPhotoItem"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="containerView" destination="3eW-Xs-jKM" id="KRl-VT-LKw"/>
                                             <outlet property="imgPhoto" destination="BQ3-ZE-mfw" id="hcJ-E5-Clt"/>
@@ -100,6 +109,9 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaGallaryCollectionView"/>
+                                </userDefinedRuntimeAttributes>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1tM-wq-HAG"/>
@@ -133,6 +145,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="k7M-Ly-Uuq"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGQ-4n-HBr">
                                                 <rect key="frame" x="20" y="235" width="374" height="23"/>
@@ -178,6 +193,9 @@
                                     <constraint firstAttribute="bottom" secondItem="4Iu-6y-68g" secondAttribute="bottom" id="b9g-nk-511"/>
                                     <constraint firstItem="4Iu-6y-68g" firstAttribute="leading" secondItem="BXS-MQ-1C6" secondAttribute="leading" id="mNu-W3-NIT"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPhotoScrollView"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SNE-Qm-XYy"/>
@@ -211,7 +229,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCH-cD-idZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="50"/>
+            <point key="canvasLocation" x="-25" y="50"/>
+        </scene>
+        <!--Photo Page View Controller-->
+        <scene sceneID="C9m-aT-98T">
+            <objects>
+                <viewController storyboardIdentifier="PhotoPageViewController" id="jjE-tW-Xpz" customClass="PhotoPageViewController" customModule="NasaGallaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDM-7E-61X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u68-uV-uXQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPhotoScrollView"/>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="MBh-b8-c2b">
+                                <rect key="frame" x="141" y="811" width="132.5" height="26"/>
+                                <color key="pageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPageControll"/>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WcG-xd-kAh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u68-uV-uXQ" firstAttribute="leading" secondItem="WcG-xd-kAh" secondAttribute="leading" id="AQK-Qr-2z1"/>
+                            <constraint firstItem="MBh-b8-c2b" firstAttribute="centerX" secondItem="WcG-xd-kAh" secondAttribute="centerX" id="D0R-Xq-deX"/>
+                            <constraint firstItem="u68-uV-uXQ" firstAttribute="bottom" secondItem="WcG-xd-kAh" secondAttribute="bottom" id="FjQ-7r-dMR"/>
+                            <constraint firstItem="WcG-xd-kAh" firstAttribute="bottom" secondItem="MBh-b8-c2b" secondAttribute="bottom" multiplier="1.03" id="aCk-KW-sje"/>
+                            <constraint firstItem="WcG-xd-kAh" firstAttribute="trailing" secondItem="u68-uV-uXQ" secondAttribute="trailing" id="pxT-cD-fFh"/>
+                            <constraint firstItem="WcG-xd-kAh" firstAttribute="top" secondItem="u68-uV-uXQ" secondAttribute="top" id="yXq-Rw-Vmm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="MBh-b8-c2b" id="TCT-VV-BbV"/>
+                        <outlet property="scrollView" destination="u68-uV-uXQ" id="tyE-Lj-13o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1a-me-GcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="50"/>
         </scene>
     </scenes>
     <resources>

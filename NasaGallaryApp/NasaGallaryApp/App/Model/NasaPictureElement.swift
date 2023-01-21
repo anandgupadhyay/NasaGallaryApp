@@ -15,7 +15,7 @@ struct NasaPictureElement: Codable {
     var serviceVersion: ServiceVersion
     var title: String
     var url: String
-
+    
     enum CodingKeys: String, CodingKey {
         case copyright, date, explanation, hdurl
         case mediaType = "media_type"

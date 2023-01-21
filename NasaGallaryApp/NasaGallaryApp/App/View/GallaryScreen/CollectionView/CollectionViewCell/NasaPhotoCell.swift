@@ -9,13 +9,14 @@ import Foundation
 import UIKit
 
 class NasaPhotoCell: UICollectionViewCell {
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var imgPhoto: MyExtendedImage!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var imgPhoto: MyExtendedImage!
     @IBOutlet private weak var lblTitle: UILabel!
     @IBOutlet private weak var lblDate: UILabel!
-    
+    var isAnimated = false
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.isAnimated = false
         containerView.isUserInteractionEnabled = true
         self.isUserInteractionEnabled = true
         containerView.layer.cornerRadius = 6
@@ -23,13 +24,13 @@ class NasaPhotoCell: UICollectionViewCell {
         containerView.configureDropShadow()
     }
     
-//    override var isSelected: Bool{
-//        didSet{
-//            UIView.animate(withDuration: 2.0) {
-//                self.transform = self.isSelected ? CGAffineTransform(scaleX: 0.9, y: 0.9) : CGAffineTransform.identity
-//            }
-//        }
-//    }
+    //    override var isSelected: Bool{
+    //        didSet{
+    //            UIView.animate(withDuration: 2.0) {
+    //                self.transform = self.isSelected ? CGAffineTransform(scaleX: 0.9, y: 0.9) : CGAffineTransform.identity
+    //            }
+    //        }
+    //    }
     
     var photo: NasaPictureElement? {
         didSet {

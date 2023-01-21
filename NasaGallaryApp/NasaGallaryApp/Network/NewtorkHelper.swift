@@ -15,7 +15,6 @@ class NetworkHelper: NetworkServiceProtocol {
         
         guard let urlObject = URL(string:urlStr) else {
             let errorTemp = NetworkError(title: "url error", description: "", code: 500)
-            //print("issue in url object")
             resultHandler(.failure(errorTemp))
             return
         }

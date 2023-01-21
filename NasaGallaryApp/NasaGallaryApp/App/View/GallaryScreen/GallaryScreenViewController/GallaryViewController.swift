@@ -11,13 +11,12 @@ import UIKit
 class GallaryViewController: UIViewController {
     
     @IBOutlet weak var nasaPictureCollectionView: UICollectionView!
-    
-    var nasaPicVm = NasaPictureVM()//Instantiate View Model
+    var nasaPicVm = NasaPictureVM()
     override func viewDidLoad(){
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupGallaryView()
         loadNasaPictureData()
+//        loadNasaPictureDataFromLocal()
     }
     
     func setupGallaryView(){
@@ -27,24 +26,45 @@ class GallaryViewController: UIViewController {
         setUpCollectionView()
     }
     
-    func onRefreshButtonClicked(_ sender: Any){
-        print("SearchButtonClicked")
+    func loadNasaPictureDataFromLocal(){
+        nasaPicVm.mockFetchPhotos(fileName: "NasaPhotos") { onComplete in
+            let rowCount: Int =  self.nasaPicVm.pictureListModel.value?.count ?? 0
+            if(rowCount == 0){
+                self.openAlert(title: Bundle.main.appName, message: ErrorMessages.noPhotos, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default],actions: [
+                    {_ in
+                        self.nasaPictureCollectionView.isHidden = true
+                        self.showNoDataView()
+                    }
+                ])
+            }else{
+                //Sort date
+                self.loadPhotoData()
+            }
+        }
     }
     
+    func loadPhotoData(){
+        DispatchQueue.main.async {
+                // UI Code Goes Here
+            
+        self.nasaPicVm.sortPhotosBy(sortKey: NasaPictureElement.CodingKeys.date.rawValue)
+        self.nasaPictureCollectionView.isHidden = false
+        self.hideNoDataView()
+        }
+    }
     func loadNasaPictureData(){
-        
         self.view.showLoading(activityColor: UIColor.white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         nasaPicVm.fetchPhotos(params: [:]) { onComplete in
             let rowCount: Int =  self.nasaPicVm.pictureListModel.value?.count ?? 0
             if(rowCount == 0){
-                self.openAlert(title: Bundle.main.appName, message: "No Pictures found", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default],actions: [
+                self.openAlert(title: Bundle.main.appName, message: ErrorMessages.noPhotos, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default],actions: [
                     {_ in
-                        
+                        self.nasaPictureCollectionView.isHidden = true
+                        self.showNoDataView()
                     }
                 ])
             }else{
-                //Sort data
-                self.sortPhotosBy(sortKey: "date")
+                self.loadPhotoData()
             }
         }
         
@@ -58,28 +78,33 @@ class GallaryViewController: UIViewController {
         
         nasaPicVm.isToShowLoader.bind { [weak self] _ in
             DispatchQueue.main.async {
-                self?.nasaPictureCollectionView.reloadData()
                 self?.view.hideLoading()
-                //                self?.view.hideLoading()
             }
         }
     }
     
-    func sortPhotosBy(sortKey: String){
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = CONST_Date_Format
-        
-        self.nasaPicVm.pictureListModel.value = self.nasaPicVm.pictureListModel.value?.sorted { first, second -> Bool in
-            let firstCreatedAtDate = formatter.date(from: first.date)!
-            let secondCreatedAtDate = formatter.date(from: second.date)!
-            return firstCreatedAtDate >= secondCreatedAtDate
-            
-        }
-        
+    
+    //No Data View
+    private lazy var nodataView: NoDataView = {
+//        let nodataView = NoDataView(frame: CGRect(x: 0,y: 0,width: NodataViewSize,height: NodataViewSize))
+        let ndV: NoDataView = Bundle.main.loadNibNamed("NoDataView", owner: self, options: nil)?.first as! NoDataView
+        ndV.center = view.center
+        ndV.setupNoDataView()
+        return ndV
+    }()
+    
+    func showNoDataView() {
+        view.addSubview(nodataView)
+        view.bringSubviewToFront(nodataView)
     }
+
+    func hideNoDataView() {
+        nodataView.removeFromSuperview()
+    }
+    
 }
 
+// MARK: - CollectionView
 extension GallaryViewController{
     //Collection view related setup
     private func setUpCollectionView() {
@@ -107,6 +132,7 @@ extension GallaryViewController{
     }
 }
 
+// MARK: - Refresh Button
 extension GallaryViewController{
     
     func addRefreshButton(){
@@ -115,8 +141,8 @@ extension GallaryViewController{
             self?.loadNasaPictureData()
         })
         let refreshBarButtonItem = UIBarButtonItem(systemItem: .refresh, primaryAction: refreshAction, menu: nil)
+        refreshBarButtonItem.accessibilityIdentifier = CONST_Refresh
         self.navigationItem.rightBarButtonItem  = refreshBarButtonItem
     }
-    
     
 }

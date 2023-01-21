@@ -21,23 +21,22 @@ class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(self.nasaPicVm!.pictureListModel.value![0])
         setupData()
     }
     
     func setupData(){
-
+        
         if let idxPath = selectedIndexPath {
-        let nasaPhoto = self.nasaPicVm!.pictureListModel.value![idxPath.row]
-        self.title =  nasaPhoto.title
-        self.lblTitle.text = nasaPhoto.title
-        if let strCopyright = nasaPhoto.copyright{
-            self.lblDate.text = "© \(strCopyright)"
-        }else{
-            self.lblDate.text = ""
-        }
-        self.txtExplanation.text = nasaPhoto.explanation
-            loadImage(hdUrl: nasaPhoto.hdurl)
+            let nasaPhoto = self.nasaPicVm!.pictureListModel.value![idxPath.row]
+            self.title =  nasaPhoto.title
+            self.lblTitle.text = nasaPhoto.title
+            if let strCopyright = nasaPhoto.copyright{
+                self.lblDate.text = "© \(strCopyright)"
+            }else{
+                self.lblDate.text = ""
+            }
+            self.txtExplanation.text = nasaPhoto.explanation
+            loadImage(hdUrl: nasaPhoto.url)
         }
     }
     
