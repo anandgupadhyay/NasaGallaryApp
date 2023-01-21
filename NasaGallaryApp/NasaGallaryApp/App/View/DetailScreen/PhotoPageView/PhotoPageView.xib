@@ -26,6 +26,9 @@
                         </fragment>
                     </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPhotoExplanation"/>
+                    </userDefinedRuntimeAttributes>
                 </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWC-hH-mwY" userLabel="Title">
                     <rect key="frame" x="0.0" y="294" width="414" height="70"/>
@@ -34,18 +37,24 @@
                         <fragment content="Title">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                <font key="NSFont" metaFont="system" size="18"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPhotoTitle"/>
+                    </userDefinedRuntimeAttributes>
                 </textView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CB6-9J-jmM" userLabel="ImageView" customClass="MyExtendedImage" customModule="NasaGallaryApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.5" width="414" height="259"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="CB6-9J-jmM" secondAttribute="height" multiplier="207:130" id="OCe-1c-V14"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPhotoImageView"/>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="8Iv-OP-tJP"/>

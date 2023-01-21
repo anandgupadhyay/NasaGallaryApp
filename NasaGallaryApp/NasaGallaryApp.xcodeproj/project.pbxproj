@@ -34,6 +34,12 @@
 		FE350ACC29797B1500CE33D5 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */; };
 		FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */; };
 		FE350AE829799E0C00CE33D5 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE350AE729799E0C00CE33D5 /* Others.swift */; };
+		FEA634CA297BAC7D00DDDCE3 /* NasaPhotoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA634C9297BAC7D00DDDCE3 /* NasaPhotoDataProvider.swift */; };
+		FEA634CC297BB88500DDDCE3 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA634CB297BB88400DDDCE3 /* Animator.swift */; };
+		FEA634CF297BDFD800DDDCE3 /* NasaPhotos.json in Resources */ = {isa = PBXBuildFile; fileRef = FEA634CE297BDFD800DDDCE3 /* NasaPhotos.json */; };
+		FEA634D1297BFE1D00DDDCE3 /* EmptyPhotos.json in Resources */ = {isa = PBXBuildFile; fileRef = FEA634D0297BFE1C00DDDCE3 /* EmptyPhotos.json */; };
+		FEA634D5297C028400DDDCE3 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA634D4297C028400DDDCE3 /* NoDataView.xib */; };
+		FEA634D7297C029900DDDCE3 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA634D6297C029900DDDCE3 /* NoDataView.swift */; };
 		FEAC8B28297ACE03001D57A4 /* PhotoPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC8B27297ACE03001D57A4 /* PhotoPageView.swift */; };
 		FEAC8B2C297ACE55001D57A4 /* PhotoPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEAC8B2B297ACE55001D57A4 /* PhotoPageView.xib */; };
 		FEAC8B2F297AD180001D57A4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC8B2E297AD180001D57A4 /* PhotoDetailViewController.swift */; };
@@ -89,6 +95,12 @@
 		FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE350AE729799E0C00CE33D5 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
+		FEA634C9297BAC7D00DDDCE3 /* NasaPhotoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPhotoDataProvider.swift; sourceTree = "<group>"; };
+		FEA634CB297BB88400DDDCE3 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		FEA634CE297BDFD800DDDCE3 /* NasaPhotos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NasaPhotos.json; sourceTree = "<group>"; };
+		FEA634D0297BFE1C00DDDCE3 /* EmptyPhotos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyPhotos.json; sourceTree = "<group>"; };
+		FEA634D4297C028400DDDCE3 /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		FEA634D6297C029900DDDCE3 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		FEAC8B27297ACE03001D57A4 /* PhotoPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageView.swift; sourceTree = "<group>"; };
 		FEAC8B2B297ACE55001D57A4 /* PhotoPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPageView.xib; sourceTree = "<group>"; };
 		FEAC8B2E297AD180001D57A4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				FE0C071B297A4AAE00C83FA4 /* GallaryScreenViewController */,
-				FE0C0713297A4A1D00C83FA4 /* Story */,
+				FE0C0713297A4A1D00C83FA4 /* View */,
 				FE0C0706297A429F00C83FA4 /* CollectionView */,
 			);
 			path = GallaryScreen;
@@ -151,6 +163,7 @@
 		FE0C06FC297A41E700C83FA4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FEA634C8297BAC6400DDDCE3 /* DataProvider */,
 				FE0C0704297A428300C83FA4 /* NasaPictureVM.swift */,
 			);
 			path = ViewModel;
@@ -182,12 +195,13 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		FE0C0713297A4A1D00C83FA4 /* Story */ = {
+		FE0C0713297A4A1D00C83FA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEA634D2297C026800DDDCE3 /* NoDataView */,
 				FE0C0714297A4A3500C83FA4 /* Main.storyboard */,
 			);
-			path = Story;
+			path = View;
 			sourceTree = "<group>";
 		};
 		FE0C0716297A4A6300C83FA4 /* Delegate_DataSource */ = {
@@ -240,9 +254,9 @@
 		FE350A772979115600CE33D5 /* NasaGallaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE350AAF297960EC00CE33D5 /* App */,
 				FE350AB32979611B00CE33D5 /* Network */,
 				FE350AB22979611300CE33D5 /* Helper */,
-				FE350AAF297960EC00CE33D5 /* App */,
 				FE350AAA2979535600CE33D5 /* Delegate */,
 				FE350A812979115C00CE33D5 /* Assets.xcassets */,
 				FE350A862979115C00CE33D5 /* Info.plist */,
@@ -332,6 +346,7 @@
 				FE350AC7297978B100CE33D5 /* UIApplicationExtension.swift */,
 				FE350ACB29797B1500CE33D5 /* ImageViewExtension.swift */,
 				FE350AE729799E0C00CE33D5 /* Others.swift */,
+				FEA634CB297BB88400DDDCE3 /* Animator.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -349,6 +364,25 @@
 				FE350ADD29797E7800CE33D5 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FEA634C8297BAC6400DDDCE3 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FEA634D0297BFE1C00DDDCE3 /* EmptyPhotos.json */,
+				FEA634CE297BDFD800DDDCE3 /* NasaPhotos.json */,
+				FEA634C9297BAC7D00DDDCE3 /* NasaPhotoDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		FEA634D2297C026800DDDCE3 /* NoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				FEA634D4297C028400DDDCE3 /* NoDataView.xib */,
+				FEA634D6297C029900DDDCE3 /* NoDataView.swift */,
+			);
+			path = NoDataView;
 			sourceTree = "<group>";
 		};
 		FEAC8B26297ACADB001D57A4 /* PhotoPageView */ = {
@@ -473,10 +507,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA634D1297BFE1D00DDDCE3 /* EmptyPhotos.json in Resources */,
 				FEAC8B2C297ACE55001D57A4 /* PhotoPageView.xib in Resources */,
+				FEA634CF297BDFD800DDDCE3 /* NasaPhotos.json in Resources */,
 				FE350ADE29797E7800CE33D5 /* LaunchScreen.storyboard in Resources */,
 				FE350A822979115C00CE33D5 /* Assets.xcassets in Resources */,
 				FE0C0715297A4A3500C83FA4 /* Main.storyboard in Resources */,
+				FEA634D5297C028400DDDCE3 /* NoDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +547,7 @@
 				FE350AAD297960DA00CE33D5 /* AppDelegate.swift in Sources */,
 				FE350AE829799E0C00CE33D5 /* Others.swift in Sources */,
 				FE0C071A297A4A9000C83FA4 /* PictureUICollectionViewDelegateFlowLayout.swift in Sources */,
+				FEA634CA297BAC7D00DDDCE3 /* NasaPhotoDataProvider.swift in Sources */,
 				FE350AC229796FE100CE33D5 /* UIView+Loading.swift in Sources */,
 				FE350ABC2979651000CE33D5 /* NewtorkHelper.swift in Sources */,
 				FE0C0722297A9D8D00C83FA4 /* PictureCollectionDelegate.swift in Sources */,
@@ -520,10 +558,12 @@
 				FE0C0709297A42FF00C83FA4 /* NasaPictureCollectionView.swift in Sources */,
 				FE350ABA297964F700CE33D5 /* NetworkServiceProtocol.swift in Sources */,
 				FE350AAE297960DA00CE33D5 /* SceneDelegate.swift in Sources */,
+				FEA634CC297BB88500DDDCE3 /* Animator.swift in Sources */,
 				FEAC8B2F297AD180001D57A4 /* PhotoDetailViewController.swift in Sources */,
 				FE0C071D297A4AC700C83FA4 /* GallaryViewController.swift in Sources */,
 				FE0C0703297A425800C83FA4 /* NasaPictureElement.swift in Sources */,
 				FE350ABE2979655A00CE33D5 /* NetworkErrorProtocol.swift in Sources */,
+				FEA634D7297C029900DDDCE3 /* NoDataView.swift in Sources */,
 				FE350AC42979701200CE33D5 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

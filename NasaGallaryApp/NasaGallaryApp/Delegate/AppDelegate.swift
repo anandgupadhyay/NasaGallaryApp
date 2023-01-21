@@ -11,7 +11,8 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+    var orientationLock = UIInterfaceOrientationMask.all
+
     private var window: UIWindow? {
         UIApplication.shared.delegate?.window ?? UIWindow(frame: UIScreen.main.bounds)
     }
@@ -39,17 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //setup Winwo with initial controller
     func initialAppSetup(){
-//        let viewController = GallaryViewController()//.setupModule()
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        window?.rootViewController = navigationController
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let navController = storyboard.instantiateInitialViewController()
+//        navController?.modalPresentationStyle = .formSheet
+//        window?.rootViewController = navController
 //        window?.makeKeyAndVisible()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let navController = storyboard.instantiateInitialViewController()
-        navController?.modalPresentationStyle = .formSheet
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
-        
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil]; UINavigationController *navigationController1 = [storyboard instantiateInitialViewController]; navigationController1. modalPresentationStyle = UIModalPresentationFormSheet; navigationController1
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+            return self.orientationLock
     }
 }
 

@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 class PhotoPageViewController: UIViewController {
-
+    
     var selectedIndexPath: IndexPath?
     var nasaPicVm: NasaPictureVM?
     var photoPages:[PhotoPageView] = []
-
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
@@ -23,15 +23,30 @@ class PhotoPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPages()
+        //support only portrait and rotate to portrait if not
+        AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
     }
-
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //Support all orientation for rest of the VCs
+        AppUtility.lockOrientation(.all)
+    }
+    
     func setupPages(){
         createPages()
         setupScrollView()
         pageControl.numberOfPages = photoPages.count
         view.bringSubviewToFront(pageControl)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.pageControl.currentPage = self.selectedIndexPath?.row ?? 0
+            let currentPage = self.selectedIndexPath?.row ?? 0 + 1
+//            print("currentpage:\(currentPage)")
+            self.pageControl.currentPage = currentPage
+//            self.scrollView.scrollRectToVisible(CGRect(x: self.scrollView.center.x * CGFloat(currentPage), y: self.scrollView.center.y, width: self.scrollView.frame.width, height: self.scrollView.frame.height) ,animated: true)
         }
     }
     
@@ -39,8 +54,8 @@ class PhotoPageViewController: UIViewController {
         if let photos = self.nasaPicVm!.pictureListModel.value {
             for photo in photos{
                 let nasaPhotoPage: PhotoPageView = Bundle.main.loadNibNamed("PhotoPageView", owner: self, options: nil)?.first as! PhotoPageView
-                    nasaPhotoPage.setupPage(photo: photo)
-                    photoPages.append(nasaPhotoPage)
+                nasaPhotoPage.setupPage(photo: photo)
+                photoPages.append(nasaPhotoPage)
             }
         }
     }
@@ -95,41 +110,38 @@ extension PhotoPageViewController: UIScrollViewDelegate{
         }
     }
     
-    
-    
-    
-//    func scrollView(_ scrollView: UIScrollView, didScrollToPercentageOffset percentageHorizontalOffset: CGFloat) {
-//        if(pageControl.currentPage == 0) {
-//
-//            let pageUnselectedColor: UIColor = fade(fromRed: 255/255, fromGreen: 255/255, fromBlue: 255/255, fromAlpha: 1, toRed: 103/255, toGreen: 58/255, toBlue: 183/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
-//            pageControl.pageIndicatorTintColor = pageUnselectedColor
-//
-//
-//            let bgColor: UIColor = fade(fromRed: 103/255, fromGreen: 58/255, fromBlue: 183/255, fromAlpha: 1, toRed: 255/255, toGreen: 255/255, toBlue: 255/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
-//            slides[pageControl.currentPage].backgroundColor = bgColor
-//
-//            let pageSelectedColor: UIColor = fade(fromRed: 81/255, fromGreen: 36/255, fromBlue: 152/255, fromAlpha: 1, toRed: 103/255, toGreen: 58/255, toBlue: 183/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
-//            pageControl.currentPageIndicatorTintColor = pageSelectedColor
-//        }
-//    }
-//
-//    func fade(fromRed: CGFloat,
-//              fromGreen: CGFloat,
-//              fromBlue: CGFloat,
-//              fromAlpha: CGFloat,
-//              toRed: CGFloat,
-//              toGreen: CGFloat,
-//              toBlue: CGFloat,
-//              toAlpha: CGFloat,
-//              withPercentage percentage: CGFloat) -> UIColor {
-//
-//        let red: CGFloat = (toRed - fromRed) * percentage + fromRed
-//        let green: CGFloat = (toGreen - fromGreen) * percentage + fromGreen
-//        let blue: CGFloat = (toBlue - fromBlue) * percentage + fromBlue
-//        let alpha: CGFloat = (toAlpha - fromAlpha) * percentage + fromAlpha
-//
-//        // return the fade colour
-//        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
-//    }
+    //    func scrollView(_ scrollView: UIScrollView, didScrollToPercentageOffset percentageHorizontalOffset: CGFloat) {
+    //        if(pageControl.currentPage == 0) {
+    //
+    //            let pageUnselectedColor: UIColor = fade(fromRed: 255/255, fromGreen: 255/255, fromBlue: 255/255, fromAlpha: 1, toRed: 103/255, toGreen: 58/255, toBlue: 183/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
+    //            pageControl.pageIndicatorTintColor = pageUnselectedColor
+    //
+    //
+    //            let bgColor: UIColor = fade(fromRed: 103/255, fromGreen: 58/255, fromBlue: 183/255, fromAlpha: 1, toRed: 255/255, toGreen: 255/255, toBlue: 255/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
+    //            slides[pageControl.currentPage].backgroundColor = bgColor
+    //
+    //            let pageSelectedColor: UIColor = fade(fromRed: 81/255, fromGreen: 36/255, fromBlue: 152/255, fromAlpha: 1, toRed: 103/255, toGreen: 58/255, toBlue: 183/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
+    //            pageControl.currentPageIndicatorTintColor = pageSelectedColor
+    //        }
+    //    }
+    //
+    //    func fade(fromRed: CGFloat,
+    //              fromGreen: CGFloat,
+    //              fromBlue: CGFloat,
+    //              fromAlpha: CGFloat,
+    //              toRed: CGFloat,
+    //              toGreen: CGFloat,
+    //              toBlue: CGFloat,
+    //              toAlpha: CGFloat,
+    //              withPercentage percentage: CGFloat) -> UIColor {
+    //
+    //        let red: CGFloat = (toRed - fromRed) * percentage + fromRed
+    //        let green: CGFloat = (toGreen - fromGreen) * percentage + fromGreen
+    //        let blue: CGFloat = (toBlue - fromBlue) * percentage + fromBlue
+    //        let alpha: CGFloat = (toAlpha - fromAlpha) * percentage + fromAlpha
+    //
+    //        // return the fade colour
+    //        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    //    }
     
 }

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import NasaGallaryApp
 
 class NasaGallaryAppUITests: XCTestCase {
 
@@ -39,4 +40,61 @@ class NasaGallaryAppUITests: XCTestCase {
             }
         }
     }
+}
+
+class PhotoGallaryUITest: XCTestCase{
+    let app = XCUIApplication()
+    
+    override func setUpWithError() throws {
+        continueAfterFailure = false;
+        app.activate()
+        app.launch()
+    }
+    
+    override func tearDownWithError() throws {
+        app.terminate()
+    }
+    
+    func testCollctionViewExist() throws {
+        XCTAssert(app.collectionViews["NasaGallaryCollectionView"].exists)
+    }
+    
+    //NasaPhotoScrollView
+    //NasaPageControll
+    //GallaryNavigationBar
+    //NasaPhotoTitle
+    //NasaPhotoImageView
+    //NasaPhotoExplanation
+    func testOrienation(){
+        (XCUIDevice.shared.orientation = .landscapeLeft)
+//        (XCUIDevice.shared.orientation = .portrait)
+    }
+    
+    func testCellExistance() throws {
+        XCTAssertTrue(app.collectionViews.element(boundBy: 0).cells.count > 0,"Number of Cell has to be more than 0")
+    }
+    
+    func testCellTapEvent() throws{
+        app.collectionViews.element(boundBy: 0).cells.element(boundBy: 0).tap()
+    }
+    
+    func testRefreshGallary() throws{
+        app.buttons["Refresh"].tap()
+    }
+    
+    func testBackFromPhotoPageScreen() throws{
+        app.collectionViews.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+    }
+    
+    func testSwipeLeft() throws{
+        app.collectionViews.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        app.swipeLeft()
+    }
+    
+    func testSwipeRight() throws{
+        app.collectionViews.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        app.swipeRight()
+    }
+    
 }

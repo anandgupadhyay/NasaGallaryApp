@@ -10,5 +10,5 @@ import Foundation
 struct NetworkHelperConstants {
     static let baseURL = "https://raw.githubusercontent.com/"
     //static let imgBaseURL = "https://apod.nasa.gov/apod/image"
-    static let movieListURL = baseURL + "obvious/take-home-exercise-data/trunk/nasa-pictures.json"
+    static let photoListURL = baseURL + "obvious/take-home-exercise-data/trunk/nasa-pictures.json"
 }
