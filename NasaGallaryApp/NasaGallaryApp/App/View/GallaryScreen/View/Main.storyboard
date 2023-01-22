@@ -252,6 +252,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="NasaPageControll"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pageValueDidChanges:" destination="jjE-tW-Xpz" eventType="valueChanged" id="FbD-9y-qYj"/>
+                                </connections>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WcG-xd-kAh"/>
