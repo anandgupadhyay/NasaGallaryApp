@@ -39,7 +39,6 @@ class PhotoPageViewController: UIViewController {
         pageControl.numberOfPages = photoPages.count
         view.bringSubviewToFront(pageControl)
         pageControl.numberOfPages = photoPages.count
-//        pageControl.currentPage = 0
         pageControl.tintColor = UIColor.systemCyan
         pageControl.pageIndicatorTintColor = UIColor.systemBlue
         pageControl.currentPageIndicatorTintColor = UIColor.orange
@@ -90,41 +89,41 @@ extension PhotoPageViewController: UIScrollViewDelegate{
         pageControl.currentPage = Int(pageNumber)
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-//        pageControl.currentPage = Int(pageIndex)
-//
-//        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
-//        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
-//
-//        // vertical
-//        let maximumVerticalOffset: CGFloat = scrollView.contentSize.height - scrollView.frame.height
-//        let currentVerticalOffset: CGFloat = scrollView.contentOffset.y
-//
-//        let percentageHorizontalOffset: CGFloat = currentHorizontalOffset / maximumHorizontalOffset
-//        let percentageVerticalOffset: CGFloat = currentVerticalOffset / maximumVerticalOffset
-//
-//        //scale Image view
-//        let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
-//
-//        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
-//
-//            photoPages[0].imgPhoto.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-//            photoPages[1].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
-//
-//        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-//            photoPages[1].imgPhoto.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-//            photoPages[2].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
-//
-//        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-//            photoPages[2].imgPhoto.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-//            photoPages[3].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
-//
-//        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-//            photoPages[3].imgPhoto.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-//            photoPages[4].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
-//        }
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
+
+        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
+        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
+
+        // vertical
+        let maximumVerticalOffset: CGFloat = scrollView.contentSize.height - scrollView.frame.height
+        let currentVerticalOffset: CGFloat = scrollView.contentOffset.y
+
+        let percentageHorizontalOffset: CGFloat = currentHorizontalOffset / maximumHorizontalOffset
+        let percentageVerticalOffset: CGFloat = currentVerticalOffset / maximumVerticalOffset
+
+        //scale Image view
+        let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
+
+        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+
+            photoPages[0].imgPhoto.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
+            photoPages[1].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
+
+        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
+            photoPages[1].imgPhoto.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
+            photoPages[2].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+
+        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
+            photoPages[2].imgPhoto.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
+            photoPages[3].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
+
+        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
+            photoPages[3].imgPhoto.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
+            photoPages[4].imgPhoto.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+        }
+    }
     
     //    func scrollView(_ scrollView: UIScrollView, didScrollToPercentageOffset percentageHorizontalOffset: CGFloat) {
     //        if(pageControl.currentPage == 0) {
