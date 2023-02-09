@@ -11,7 +11,7 @@ import Foundation
 class NetworkHelper: NetworkServiceProtocol {
     static let shared = NetworkHelper()
     
-    func startNetworkTask(urlStr:String, params:[String:Any], resultHandler: @escaping (Result<Data?, Error>) -> Void)  {
+    func startNetworkTask(urlStr:String, params:[String:Any], resultHandler: @escaping (Result<Data?, Error>) -> Void) {
         
         guard let urlObject = URL(string:urlStr) else {
             let errorTemp = NetworkError(title: "url error", description: "", code: 500)
