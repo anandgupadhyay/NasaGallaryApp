@@ -59,15 +59,8 @@ class PhotoGallaryUITest: XCTestCase{
         XCTAssert(app.collectionViews["NasaGallaryCollectionView"].exists)
     }
     
-    //NasaPhotoScrollView
-    //NasaPageControll
-    //GallaryNavigationBar
-    //NasaPhotoTitle
-    //NasaPhotoImageView
-    //NasaPhotoExplanation
     func testOrienation(){
         (XCUIDevice.shared.orientation = .landscapeLeft)
-//        (XCUIDevice.shared.orientation = .portrait)
     }
     
     func testCellExistance() throws {

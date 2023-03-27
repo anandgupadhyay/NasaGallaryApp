@@ -28,7 +28,6 @@ class NasaPictureVM {
             
         }
         complete(self.pictureListModel)
-        
     }
     
     internal func fetchPhotos(params:[String:Any], complete: @escaping (AppObserver<NasaPicture?>)->()) {
