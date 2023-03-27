@@ -12,6 +12,7 @@ class GallaryViewController: UIViewController {
     
     @IBOutlet weak var nasaPictureCollectionView: UICollectionView!
     var nasaPicVm = NasaPictureVM()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         setupGallaryView()
@@ -45,13 +46,13 @@ class GallaryViewController: UIViewController {
     
     func loadPhotoData(){
         DispatchQueue.main.async {
-                // UI Code Goes Here
-            
+        // UI Code Goes Here
         self.nasaPicVm.sortPhotosBy(sortKey: NasaPictureElement.CodingKeys.date.rawValue)
         self.nasaPictureCollectionView.isHidden = false
         self.hideNoDataView()
         }
     }
+    
     func loadNasaPictureData(){
         self.view.showLoading(activityColor: UIColor.white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         nasaPicVm.fetchPhotos(params: [:]) { onComplete in

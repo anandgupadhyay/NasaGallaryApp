@@ -12,7 +12,7 @@ class Animator: UIViewController, CAAnimationDelegate {
 
     static let kSlideAnimationDuration: CFTimeInterval = 0.4
 
-    static func viewSlideInFromRight(toLeft views: UIView) {
+    static func viewSlideInFromRight(toLeft views: UIView){
         var transition: CATransition? = nil
         transition = CATransition.init()
         transition?.type = CATransitionType.push
@@ -22,7 +22,7 @@ class Animator: UIViewController, CAAnimationDelegate {
         views.layer.add(transition!, forKey: nil)
     }
 
-    static func viewSlideInFromLeft(toRight views: UIView) {
+    static func viewSlideInFromLeft(toRight views: UIView){
         var transition: CATransition? = nil
         transition = CATransition.init()
         transition?.type = CATransitionType.push
